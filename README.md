@@ -7,7 +7,7 @@ HOW TO USE:
 Watch this video: https://www.youtube.com/watch?v=046lbtMdrig
 
 HOW TO RUN
-1. It is recommended you run the dashboard from here: https://jball.shinyapps.io/Dashboard/
+1. It is recommended you run the dashboard from here: https://jball.shinyapps.io/PCA-Dashboard/
 2. It is hosted on shinyapps.io for free, which removes the worry of software issues or missing datasets.
 
 HOW TO RUN IN R STUDIO
