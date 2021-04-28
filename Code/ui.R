@@ -1,12 +1,11 @@
 library(shiny)
 library(corrplot)
+library(ShinyQuickStarter)
 ui <- fluidPage(
   # App title ----
-  titlePanel("All-in-one Dashboard"),
+  titlePanel("PCA Dashboard"),
   
   # Sidebar layout with input and output definitions ----
-  navbarPage(
-    "Dashboard Selection",
     tabPanel("PCA Dashboard",
              sidebarLayout(
                # Sidebar panel for inputs ----
@@ -175,80 +174,7 @@ ui <- fluidPage(
                  
                )
                
-             )),
-    tabPanel(
-      "Eigenfaces Dashboard",
-      sidebarLayout(
-        # Sidebar panel for inputs ----
-        sidebarPanel(
-          h3("Tool Side Panel"),
-          
-          h6(
-            "You must press 'Read Data' at the bottom of the sidebar in order to work with your dataset"
-          ),
-          tags$hr(),
-          
-          selectInput(
-            "imageDataSet",
-            "Select a built in dataset:",
-            choices = c('\n', "Nottingham Originals Dataset", "Olivetti Dataset"),
-            selected = ""
-          ),
-          # Input: Select a file ----
-          fileInput(
-            'inImages',
-            'Select image(s) to upload',
-            accept = c('.jpeg', '.jpg'),
-            multiple = T
-          )
-          ,
-          fileInput(
-            'inDataSetFile',
-            'Choose a .csv of faces to upload',
-            accept = c('.csv'),
-            multiple = F
-          ),
-          
-          tags$hr(),
-          
-          
-          
-          # Horizontal line ----
-          tags$hr(),
-          # Input: Select number of rows to display ----
-          
-          
-          actionButton("faceUpdate", "Read Images"),
-        ),
-        mainPanel(tabsetPanel(
-          type = "tabs",
-          tabPanel(
-            "Face Average Plot",
-            plotOutput("faceAvgPlot", width = 560, height = 256)
-          ),
-          tabPanel(
-            "Eigenvalue Plotting",
-            plotOutput("faceEPlot", width = 560, height = 256)
-          ),
-          tabPanel(
-            "Face Classification",
-            plotOutput("simPlot", width = 560, height = 256),
-            verbatimTextOutput("matchingImg"),
-            fileInput(
-              'target',
-              'Target image of a face in .jpeg/jpg format',
-              accept = c('.jpg', '.jpeg'),
-              multiple = F
-            ),
-            
-            actionButton("performClass", "Find matching image"),
-            
-            
-          )
-          
-        ))
-      )
-    )
+             )
     
   )#end of navbar
   ,
