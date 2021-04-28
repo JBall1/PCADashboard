@@ -29,9 +29,4 @@ FEATURES:
 	F. Scree Graph
 	G. Target variable selection
 	H. 5 Built in datasets
-	I. Average Face Plot
-	J. Face Heatmap
 	K. Largest eigenvalue plot
-
-ERRORS/Work in progress:
-1. Face Classification DOES NOT work. Loading an image in the "Face Classification" portion of the dashboard and pressing "Find matching image" will cause the dashboard to CRASH. 
